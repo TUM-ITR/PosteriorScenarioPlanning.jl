@@ -7,8 +7,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"julialang.language-julia",
-				"anthropic.claude-code"
+				"julialang.language-julia"
 			],
 			"settings": {
 				"editor.formatOnSave": true,
@@ -28,7 +27,6 @@
 		"OMP_NUM_THREADS": "1"
 	},
 	"remoteEnv": {
-		"SSH_AUTH_SOCK": "/ssh-agent",
 		"JULIA_DEPOT_PATH": "/home/developer/.julia",
 		"JULIA_PROJECT": "/home/developer/workspace/experiments"
 	},
