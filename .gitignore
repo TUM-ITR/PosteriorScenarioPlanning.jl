@@ -1,0 +1,10 @@
+.vscode/*
+**/*.tar.gz
+**/*.tar
+**/*.sif
+.devcontainer/HSL_jll.jl.v2024.11.28/*
+.julia/*
+experiments/montecarlo/results/*
+experiments/montecarlo/logs/*
+docs/build/*
+docs/Manifest.toml
