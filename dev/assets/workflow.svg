@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="105 0 500 545" width="500" height="545" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8a8a8a"/>
+    </marker>
+    <style>
+      .blue   { fill: #d9eaf5; stroke: #0072b2; stroke-width: 1.6; }
+      .orange { fill: #fbeccc; stroke: #e69f00; stroke-width: 1.6; }
+      .green  { fill: #d6efe7; stroke: #009e73; stroke-width: 1.6; }
+      .dec    { fill: #fdf6e8; stroke: #e69f00; stroke-width: 1.6; }
+      .title  { font-size: 15px; font-weight: bold; fill: #1a1a1a; text-anchor: middle; }
+      .txt    { font-size: 14px; fill: #1a1a1a; text-anchor: middle; }
+      .sub    { font-size: 10px; }
+      .lbl    { font-size: 13px; fill: #8a8a8a; }
+      .l      { text-anchor: end; }
+      .r      { text-anchor: start; }
+      .c      { text-anchor: middle; }
+      .flow   { stroke: #8a8a8a; stroke-width: 1.6; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <!-- ===== Main column (center x = 260) ===== -->
+
+  <!-- Scenario generation -->
+  <rect class="blue" x="145" y="40" width="230" height="50" rx="5"/>
+  <text class="title" x="260" y="61">Scenario generation</text>
+  <text class="txt" x="260" y="80">via PMCMC</text>
+
+  <!-- Synthesis -->
+  <rect class="orange" x="145" y="125" width="230" height="50" rx="5"/>
+  <text class="title" x="260" y="146">Synthesis</text>
+  <text class="txt" x="260" y="165">scenario OCP with ω<tspan class="sub" dy="4">j</tspan></text>
+
+  <!-- Validation -->
+  <rect class="green" x="145" y="210" width="230" height="50" rx="5"/>
+  <text class="title" x="260" y="231">Validation</text>
+  <text class="txt" x="260" y="250">via forward simulation</text>
+
+  <!-- Certified? -->
+  <polygon class="dec" points="260,285 330,315 260,345 190,315"/>
+  <text class="txt" x="260" y="320">Certified?</text>
+
+  <!-- Weight update -->
+  <rect class="orange" x="145" y="370" width="230" height="40" rx="5"/>
+  <text class="title" x="260" y="395">Weight update</text>
+
+  <!-- Attempts left? -->
+  <polygon class="dec" points="260,435 335,470 260,505 185,470"/>
+  <text class="txt" x="260" y="466">Attempts</text>
+  <text class="txt" x="260" y="483">left?</text>
+
+  <!-- ===== Right column (center x = 510) ===== -->
+
+  <!-- Store as admissible -->
+  <rect class="orange" x="430" y="297" width="160" height="36" rx="5"/>
+  <text class="txt" x="510" y="320">Store as admissible</text>
+
+  <!-- In band? -->
+  <polygon class="dec" points="510,362 575,390 510,418 445,390"/>
+  <text class="txt" x="510" y="395">In band?</text>
+
+  <!-- Return best candidate -->
+  <rect class="orange" x="430" y="445" width="160" height="50" rx="5"/>
+  <text class="title" x="510" y="466">Return</text>
+  <text class="txt" x="510" y="485">best candidate</text>
+
+  <!-- ===== Arrows ===== -->
+
+  <!-- data in -->
+  <path class="flow" d="M260,10 L260,38"/>
+  <text class="lbl r" x="268" y="28">data D</text>
+
+  <!-- scenario generation -> synthesis : training scenarios -->
+  <path class="flow" d="M260,90 L260,123"/>
+  <text class="lbl l" x="252" y="104">training scenarios</text>
+  <text class="lbl l" x="252" y="119">(fixed)</text>
+
+  <!-- scenario generation -> validation : validation scenarios -->
+  <path class="flow" d="M375,65 L400,65 L400,235 L377,235"/>
+  <text class="lbl r" x="408" y="140">validation scenarios</text>
+  <text class="lbl r" x="408" y="156">(resampled per attempt)</text>
+
+  <!-- synthesis -> validation : candidate -->
+  <path class="flow" d="M260,175 L260,208"/>
+  <text class="lbl l" x="252" y="197">û<tspan class="sub" dy="-6">(j)</tspan></text>
+
+  <!-- validation -> certified? : delta_j -->
+  <path class="flow" d="M260,260 L260,283"/>
+  <text class="lbl l" x="252" y="277">δ<tspan class="sub" dy="4">j</tspan></text>
+
+  <!-- certified? -> store : yes -->
+  <path class="flow" d="M330,315 L428,315"/>
+  <text class="lbl c" x="379" y="308">yes</text>
+
+  <!-- certified? -> weight update : no -->
+  <path class="flow" d="M260,345 L260,368"/>
+  <text class="lbl l" x="252" y="362">no</text>
+
+  <!-- store -> in band? -->
+  <path class="flow" d="M510,333 L510,360"/>
+
+  <!-- in band? -> weight update : no -->
+  <path class="flow" d="M445,390 L377,390"/>
+  <text class="lbl c" x="411" y="383">no</text>
+
+  <!-- in band? -> return : yes -->
+  <path class="flow" d="M510,418 L510,443"/>
+  <text class="lbl r" x="518" y="436">yes</text>
+
+  <!-- weight update -> attempts left? : omega_{j+1} -->
+  <path class="flow" d="M260,410 L260,433"/>
+  <text class="lbl l" x="252" y="427">ω<tspan class="sub" dy="4">j+1</tspan></text>
+
+  <!-- attempts left? -> return : no -->
+  <path class="flow" d="M335,470 L428,470"/>
+  <text class="lbl c" x="381" y="463">no</text>
+
+  <!-- attempts left? -> synthesis : yes (loop on the left) -->
+  <path class="flow" d="M185,470 L120,470 L120,150 L143,150"/>
+  <text class="lbl c" x="152" y="463">yes</text>
+
+  <!-- return -> output -->
+  <path class="flow" d="M510,495 L510,530"/>
+  <text class="lbl r" x="518" y="518">u*, δ*</text>
+</svg>
