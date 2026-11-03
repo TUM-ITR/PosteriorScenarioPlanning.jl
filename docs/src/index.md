@@ -5,9 +5,7 @@
 It implements the method described in:
 
 > **A Bayesian Framework for Safe Optimal Control of Unknown Systems from Input–Output Data**
->
 > *Robert Lefringhausen, Annalena Daniels, Michael Fink, Sandra Hirche*
->
 > [arXiv:2611.03466](https://arxiv.org/abs/2611.03466) (2026)
 
 ## Scope
