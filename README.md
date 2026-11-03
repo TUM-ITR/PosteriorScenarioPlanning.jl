@@ -3,6 +3,7 @@
 </p>
 
 [![Dev](https://img.shields.io/badge/docs-dev-blue?logo=Julia&logoColor=white)](https://tum-itr.github.io/PosteriorScenarioPlanning.jl/dev/)
+[![arXiv](https://img.shields.io/badge/arXiv-2611.03466-b31b1b?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.03466)
 [![DOI](https://img.shields.io/badge/DOI-10.5281/zenodo.23917310-blue)](https://doi.org/10.5281/zenodo.23917310)
 
 **PosteriorScenarioPlanning.jl** provides a framework for **safe optimal control of unknown nonlinear systems from input–output data**, with probabilistic guarantees for constraint satisfaction.
