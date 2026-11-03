@@ -5,8 +5,10 @@
 It implements the method described in:
 
 > **A Bayesian Framework for Safe Optimal Control of Unknown Systems from Input–Output Data**
+>
 > *Robert Lefringhausen, Annalena Daniels, Michael Fink, Sandra Hirche*
-> Preprint (2026)
+>
+> [arXiv:2611.03466](https://arxiv.org/abs/2611.03466) (2026)
 
 ## Scope
 
@@ -59,9 +61,9 @@ If you use this code in your research, please cite:
 
 ```bibtex
 @article{lefringhausen2026bayesian,
-  title   = {A Bayesian Framework for Safe Optimal Control of Unknown Systems from Input--Output Data},
-  author  = {Lefringhausen, Robert and Daniels, Annalena and Fink, Michael and Hirche, Sandra},
-  journal = {Preprint},
-  year    = {2026}
+  title={A Bayesian Framework for Safe Optimal Control of Unknown Systems from Input--Output Data},
+  author={Lefringhausen, Robert and Daniels, Annalena and Fink, Michael and Hirche, Sandra},
+  journal={arXiv preprint arXiv:2611.03466},
+  year={2026}
 }
 ```
